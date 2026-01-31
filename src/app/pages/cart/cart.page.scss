@@ -1,0 +1,407 @@
+.cart-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 0 4rem;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+  border-bottom: 1px solid #f5f0f2;
+  padding-bottom: 1.5rem;
+}
+
+.cart-header h1 {
+  margin: 0 0 0.4rem;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+}
+
+.cart-header p {
+  margin: 0;
+  color: #6b7280;
+}
+
+.cart-header p span {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.tax-box {
+  text-align: right;
+  font-size: 0.75rem;
+  color: #9ca3af;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.tax-box strong {
+  display: block;
+  font-size: 0.9rem;
+  color: #181114;
+  letter-spacing: normal;
+  margin-top: 0.3rem;
+}
+
+.discount-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  background: rgba(250, 198, 56, 0.08);
+  border: 1px solid rgba(250, 198, 56, 0.2);
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+}
+
+.discount-banner div {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.discount-banner p {
+  margin: 0;
+  color: #b07d00;
+}
+
+.discount-banner p span {
+  text-decoration: underline;
+}
+
+.bar {
+  width: 120px;
+  height: 0.5rem;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.bar span {
+  display: block;
+  height: 100%;
+  width: 75%;
+  background: var(--primary);
+}
+
+.cart-layout {
+  display: grid;
+  gap: 2rem;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cart-card {
+  display: flex;
+  gap: 1.5rem;
+  background: #ffffff;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.04);
+  border: 1px solid transparent;
+}
+
+.card-image {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  background: #f3f4f6;
+  flex-shrink: 0;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.card-head h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.card-head p {
+  margin: 0.35rem 0 0;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.icon-btn {
+  border: none;
+  background: transparent;
+  color: #9ca3af;
+  cursor: pointer;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.qty {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: #9ca3af;
+  font-weight: 800;
+}
+
+.qty-control {
+  display: inline-flex;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.7rem;
+  overflow: hidden;
+}
+
+.qty-control button {
+  background: #f3f4f6;
+  border: none;
+  padding: 0.4rem 0.8rem;
+}
+
+.qty-control input {
+  width: 3rem;
+  text-align: center;
+  border: none;
+  background: transparent;
+  font-weight: 700;
+}
+
+.price {
+  text-align: right;
+}
+
+.price span {
+  display: inline-block;
+  font-size: 0.7rem;
+  background: #f0fdf4;
+  color: #16a34a;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.4rem;
+  margin-bottom: 0.4rem;
+  font-weight: 700;
+}
+
+.price strong {
+  font-size: 1.2rem;
+}
+
+.payment-options {
+  margin-top: 1rem;
+}
+
+.payment-options h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.payment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.payment-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  padding: 1.2rem;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.payment-card input {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.payment-card.active {
+  border-color: var(--primary);
+  background: rgba(250, 198, 56, 0.08);
+}
+
+.payment-card.muted {
+  opacity: 0.6;
+}
+
+.summary {
+  position: sticky;
+  top: 7rem;
+  align-self: start;
+}
+
+.summary-box {
+  background: #ffffff;
+  border-radius: 2rem;
+  padding: 2rem;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f3f4f6;
+}
+
+.summary-box h3 {
+  margin-top: 0;
+}
+
+.summary-list {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.summary-list div {
+  display: flex;
+  justify-content: space-between;
+  color: #6b7280;
+}
+
+.summary-list strong {
+  color: #181114;
+}
+
+.summary-list .discount {
+  background: #f0fdf4;
+  color: #16a34a;
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.7rem;
+  font-weight: 700;
+}
+
+.summary-list .tax {
+  border-top: 1px solid #f3f4f6;
+  padding-top: 1rem;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.summary-list .tax div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+}
+
+.summary-list .total {
+  border-top: 1px solid #f3f4f6;
+  padding-top: 1rem;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #181114;
+}
+
+.summary-list .total strong {
+  color: var(--primary);
+}
+
+.summary-list .total small {
+  display: block;
+  font-size: 0.65rem;
+  color: #9ca3af;
+  text-transform: uppercase;
+}
+
+.primary-btn {
+  background: var(--primary);
+  border: none;
+  color: #ffffff;
+  border-radius: 1rem;
+  padding: 1rem 1.4rem;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.ghost-btn {
+  margin-top: 0.75rem;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  padding: 0.9rem 1.2rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.primary-btn.full,
+.ghost-btn.full {
+  width: 100%;
+}
+
+.trust {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #f3f4f6;
+  display: grid;
+  gap: 0.8rem;
+  color: #6b7280;
+}
+
+.trust div {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+}
+
+.back-link {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--primary);
+  font-weight: 700;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .cart-layout {
+    grid-template-columns: minmax(0, 1fr) 420px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cart-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cart-card {
+    flex-direction: column;
+  }
+}
