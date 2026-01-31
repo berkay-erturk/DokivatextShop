@@ -1,26 +1,23 @@
 <div class="listing-page">
   <div class="listing-header">
     <nav class="breadcrumbs">
-      <a href="#" i18n>B2B Portal</a>
+      <a href="#">{{ 'listing.breadcrumbRoot' | translate }}</a>
       <span class="material-symbols-outlined">chevron_right</span>
-      <span i18n>Wholesale Organic Fabric</span>
+      <span>{{ 'listing.breadcrumbCurrent' | translate }}</span>
     </nav>
     <div class="header-row">
       <div>
-        <h1 i18n>Organic Cotton Wholesale</h1>
-        <p i18n>
-          Premium sustainable textiles for large-scale production. Guaranteed lead times and tiered bulk discounts
-          applied at checkout.
-        </p>
+        <h1>{{ 'listing.title' | translate }}</h1>
+        <p>{{ 'listing.desc' | translate }}</p>
       </div>
       <div class="header-actions">
         <div class="sort-pill">
           <span class="material-symbols-outlined">sort</span>
-          <span i18n>Sort by: MOQ (Low to High)</span>
+          <span>{{ 'listing.sort' | translate }}</span>
         </div>
-        <button class="secondary-btn" i18n>
+        <button class="secondary-btn">
           <span class="material-symbols-outlined">download</span>
-          Export Catalog (PDF)
+          {{ 'listing.export' | translate }}
         </button>
       </div>
     </div>
@@ -30,37 +27,37 @@
     <aside class="filters">
       <div class="filters-inner">
         <div class="filters-head">
-          <h3 i18n>Inventory Filters</h3>
-          <button class="link-btn" i18n>Reset</button>
+          <h3>{{ 'listing.filters' | translate }}</h3>
+          <button class="link-btn">{{ 'listing.reset' | translate }}</button>
         </div>
         <label class="filter-highlight">
           <div>
             <input type="checkbox" checked />
-            <span i18n>In Stock for Bulk</span>
+            <span>{{ 'listing.inStock' | translate }}</span>
           </div>
           <span class="material-symbols-outlined">inventory_2</span>
         </label>
 
         <div class="filter-group">
-          <span class="filter-title" i18n>Fabric Type</span>
-          <label><input type="checkbox" /> <span i18n>Woven Twill</span></label>
-          <label><input type="checkbox" checked /> <span i18n>Single Jersey</span></label>
-          <label><input type="checkbox" /> <span i18n>Heavy Canvas</span></label>
-          <label><input type="checkbox" /> <span i18n>Interlock Knit</span></label>
+          <span class="filter-title">{{ 'listing.fabricType' | translate }}</span>
+          <label><input type="checkbox" /> <span>Woven Twill</span></label>
+          <label><input type="checkbox" checked /> <span>Single Jersey</span></label>
+          <label><input type="checkbox" /> <span>Heavy Canvas</span></label>
+          <label><input type="checkbox" /> <span>Interlock Knit</span></label>
         </div>
 
         <div class="filter-group">
-          <span class="filter-title" i18n>Minimum Order (MOQ)</span>
+          <span class="filter-title">{{ 'listing.moq' | translate }}</span>
           <div class="pill-grid">
-            <button i18n>Under 50m</button>
-            <button class="active" i18n>50m - 200m</button>
-            <button i18n>200m - 500m</button>
-            <button i18n>500m+</button>
+            <button>Under 50m</button>
+            <button class="active">50m - 200m</button>
+            <button>200m - 500m</button>
+            <button>500m+</button>
           </div>
         </div>
 
         <div class="filter-group">
-          <span class="filter-title" i18n>Price per Unit</span>
+          <span class="filter-title">{{ 'listing.price' | translate }}</span>
           <input class="range" type="range" min="5" max="50" value="15" />
           <div class="range-labels">
             <span>$5.00/m</span>
@@ -68,18 +65,18 @@
           </div>
         </div>
       </div>
-      <button class="primary-btn full" i18n>Apply Wholesale Filters</button>
+      <button class="primary-btn full">{{ 'listing.applyFilters' | translate }}</button>
     </aside>
 
     <section class="listing-content">
       <div class="active-filters">
-        <span i18n>Active:</span>
+        <span>{{ 'listing.active' | translate }}</span>
         <div class="chip green">
-          <span i18n>In Stock for Bulk</span>
+          <span>{{ 'listing.inStock' | translate }}</span>
           <span class="material-symbols-outlined">close</span>
         </div>
         <div class="chip yellow">
-          <span i18n>Single Jersey</span>
+          <span>Single Jersey</span>
           <span class="material-symbols-outlined">close</span>
         </div>
       </div>
@@ -305,12 +302,12 @@
 
       <div class="listing-footer">
         <div>
-          <p i18n>Showing 4 of 48 bulk items</p>
+          <p>Showing 4 of 48 bulk items</p>
           <div class="progress">
             <span></span>
           </div>
         </div>
-        <button class="outline-btn" i18n>Load More Textiles</button>
+        <button class="outline-btn">{{ 'listing.loadMore' | translate }}</button>
       </div>
     </section>
   </div>

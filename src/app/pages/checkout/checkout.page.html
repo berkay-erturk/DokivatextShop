@@ -1,0 +1,38 @@
+<div class="checkout-page">
+  <div class="summary-box">
+    <h3>{{ 'summary.title' | translate }}</h3>
+    <div class="summary-list">
+      <div><span>{{ 'summary.subtotal' | translate }}</span><strong>$24,500.00</strong></div>
+      <div class="discount"><span>{{ 'summary.discount' | translate }}</span><strong>- $5,000.00</strong></div>
+      <div><span>{{ 'summary.shipping' | translate }}</span><strong>{{ 'summary.freeTier' | translate }}</strong></div>
+      <div class="tax">
+        <div><span>{{ 'summary.taxable' | translate }}</span><span>$19,500.00</span></div>
+        <div><span>{{ 'summary.vat' | translate }}</span><span>$3,900.00</span></div>
+      </div>
+      <div class="total">
+        <span>{{ 'summary.total' | translate }}</span>
+        <div>
+          <strong>$23,400.00</strong>
+          <small>{{ 'summary.inclTaxes' | translate }}</small>
+        </div>
+      </div>
+    </div>
+    <button class="primary-btn full">
+      <span class="material-symbols-outlined">description</span>
+      {{ 'summary.finalize' | translate }}
+    </button>
+    <button class="ghost-btn full">
+      <span class="material-symbols-outlined">download</span>
+      {{ 'summary.proforma' | translate }}
+    </button>
+    <div class="trust">
+      <div><span class="material-symbols-outlined">verified</span><span>{{ 'summary.trust1' | translate }}</span></div>
+      <div><span class="material-symbols-outlined">local_shipping</span><span>{{ 'summary.trust2' | translate }}</span></div>
+      <div><span class="material-symbols-outlined">support_agent</span><span>{{ 'summary.trust3' | translate }}</span></div>
+    </div>
+  </div>
+  <a class="back-link" routerLink="/products">
+    <span class="material-symbols-outlined">arrow_back</span>
+    {{ 'summary.backToCatalog' | translate }}
+  </a>
+</div>

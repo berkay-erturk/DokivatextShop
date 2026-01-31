@@ -1,0 +1,128 @@
+.checkout-page {
+  display: grid;
+  gap: 2rem;
+  justify-items: center;
+  padding: 2rem 0 4rem;
+}
+
+.summary-box {
+  background: #ffffff;
+  border-radius: 2rem;
+  padding: 2rem;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f3f4f6;
+  width: min(520px, 100%);
+}
+
+.summary-list {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.summary-list div {
+  display: flex;
+  justify-content: space-between;
+  color: #6b7280;
+}
+
+.summary-list strong {
+  color: #181114;
+}
+
+.summary-list .discount {
+  background: #f0fdf4;
+  color: #16a34a;
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.7rem;
+  font-weight: 700;
+}
+
+.summary-list .tax {
+  border-top: 1px solid #f3f4f6;
+  padding-top: 1rem;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.summary-list .tax div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+}
+
+.summary-list .total {
+  border-top: 1px solid #f3f4f6;
+  padding-top: 1rem;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #181114;
+}
+
+.summary-list .total strong {
+  color: var(--primary);
+}
+
+.summary-list .total small {
+  display: block;
+  font-size: 0.65rem;
+  color: #9ca3af;
+  text-transform: uppercase;
+}
+
+.primary-btn {
+  background: var(--primary);
+  border: none;
+  color: #ffffff;
+  border-radius: 1rem;
+  padding: 1rem 1.4rem;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.ghost-btn {
+  margin-top: 0.75rem;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  padding: 0.9rem 1.2rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.primary-btn.full,
+.ghost-btn.full {
+  width: 100%;
+}
+
+.trust {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #f3f4f6;
+  display: grid;
+  gap: 0.8rem;
+  color: #6b7280;
+}
+
+.trust div {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+}
+
+.back-link {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--primary);
+  font-weight: 700;
+  justify-content: center;
+}

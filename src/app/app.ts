@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { MainLayout } from './layout/main-layout';
 
 @Component({
@@ -8,4 +9,8 @@ import { MainLayout } from './layout/main-layout';
   styleUrl: './app.scss'
 })
 export class App {
+  constructor(private translate: TranslateService) {
+    this.translate.setDefaultLang('tr');
+    this.translate.use('tr');
+  }
 }

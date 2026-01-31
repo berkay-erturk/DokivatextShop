@@ -1,34 +1,35 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   standalone: true,
   selector: 'app-main-layout',
-  imports: [RouterOutlet, RouterLink, RouterLinkActive],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, TranslateModule],
   template: `
     <div class="layout-shell">
       <header class="site-header">
         <div class="container header-inner">
           <div class="brand-block">
             <span class="material-symbols-outlined brand-icon">corporate_fare</span>
-            <a class="brand-title" routerLink="/" i18n>TextileStore</a>
-            <span class="brand-pill" i18n>B2B</span>
+            <a class="brand-title" routerLink="/">{{ 'brand.name' | translate }}</a>
+            <span class="brand-pill">{{ 'brand.b2b' | translate }}</span>
           </div>
           <nav class="nav-links">
-            <a routerLink="/products" routerLinkActive="active" i18n>Raw Materials</a>
-            <a routerLink="/products" routerLinkActive="active" i18n>Finished Goods</a>
-            <a routerLink="/products" routerLinkActive="active" i18n>Hospitality</a>
-            <a routerLink="/products" routerLinkActive="active" i18n>Industrial</a>
-            <a routerLink="/products" class="highlight" routerLinkActive="active" i18n>Bulk Tiers</a>
+            <a routerLink="/products" routerLinkActive="active">{{ 'nav.rawMaterials' | translate }}</a>
+            <a routerLink="/products" routerLinkActive="active">{{ 'nav.finishedGoods' | translate }}</a>
+            <a routerLink="/products" routerLinkActive="active">{{ 'nav.hospitality' | translate }}</a>
+            <a routerLink="/products" routerLinkActive="active">{{ 'nav.industrial' | translate }}</a>
+            <a routerLink="/products" class="highlight" routerLinkActive="active">{{ 'nav.bulkTiers' | translate }}</a>
           </nav>
           <div class="header-actions">
             <div class="search-box">
               <span class="material-symbols-outlined">search</span>
-              <input placeholder="Search wholesale catalog..." i18n-placeholder />
+              <input [placeholder]="'header.searchPlaceholder' | translate" />
             </div>
-            <button class="primary-btn" i18n>Become a Partner</button>
+            <button class="primary-btn">{{ 'header.partnerButton' | translate }}</button>
             <div class="account-block">
-              <button class="icon-btn" routerLink="/cart" aria-label="Orders">
+              <button class="icon-btn" routerLink="/cart" [attr.aria-label]="('header.ordersLabel' | translate)">
                 <span class="material-symbols-outlined">orders</span>
               </button>
               <div class="avatar"></div>
@@ -38,7 +39,9 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
       </header>
 
       <main class="content">
-        <router-outlet></router-outlet>
+        <div class="container content-inner">
+          <router-outlet></router-outlet>
+        </div>
       </main>
 
       <footer class="site-footer">
@@ -46,13 +49,10 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
           <div class="footer-brand">
             <div class="brand-block">
               <span class="material-symbols-outlined brand-icon">corporate_fare</span>
-              <span class="brand-title" i18n>TextileStore</span>
-              <span class="brand-pill" i18n>B2B</span>
+              <span class="brand-title">{{ 'brand.name' | translate }}</span>
+              <span class="brand-pill">{{ 'brand.b2b' | translate }}</span>
             </div>
-            <p i18n>
-              The leading global platform for professional textile sourcing. Bridging the gap between artisanal quality
-              and industrial scale.
-            </p>
+            <p>{{ 'footer.description' | translate }}</p>
             <div class="social-links">
               <a href="#" aria-label="Business">
                 <span class="material-symbols-outlined">business_center</span>
@@ -67,35 +67,35 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
           </div>
           <div class="footer-columns">
             <div>
-              <h4 i18n>Wholesale</h4>
-              <a href="#" i18n>Bulk New Arrivals</a>
-              <a href="#" i18n>Wholesale Best Sellers</a>
-              <a href="#" i18n>MoQ & Tiers</a>
-              <a href="#" i18n>Sample Kits</a>
+              <h4>{{ 'footer.wholesale' | translate }}</h4>
+              <a href="#">{{ 'footer.bulkArrivals' | translate }}</a>
+              <a href="#">{{ 'footer.bestSellers' | translate }}</a>
+              <a href="#">{{ 'footer.moqTiers' | translate }}</a>
+              <a href="#">{{ 'footer.sampleKits' | translate }}</a>
             </div>
             <div>
-              <h4 i18n>B2B Services</h4>
-              <a href="#" i18n>Custom Dyeing</a>
-              <a href="#" i18n>White Labeling</a>
-              <a href="#" i18n>Freight Solutions</a>
-              <a href="#" i18n>Line of Credit</a>
+              <h4>{{ 'footer.services' | translate }}</h4>
+              <a href="#">{{ 'footer.customDyeing' | translate }}</a>
+              <a href="#">{{ 'footer.whiteLabel' | translate }}</a>
+              <a href="#">{{ 'footer.freight' | translate }}</a>
+              <a href="#">{{ 'footer.creditLine' | translate }}</a>
             </div>
             <div>
-              <h4 i18n>B2B Insights</h4>
-              <p i18n>Market trends and textile reports delivered weekly.</p>
+              <h4>{{ 'footer.insights' | translate }}</h4>
+              <p>{{ 'footer.insightsDesc' | translate }}</p>
               <div class="newsletter">
-                <input placeholder="Work email address" i18n-placeholder type="email" />
-                <button i18n>GET INDUSTRY UPDATES</button>
+                <input [placeholder]="'footer.emailPlaceholder' | translate" type="email" />
+                <button>{{ 'footer.getUpdates' | translate }}</button>
               </div>
             </div>
           </div>
         </div>
         <div class="container footer-bottom">
-          <p i18n>© 2024 TextileStore Wholesale Division. ISO 9001 Certified.</p>
+          <p>{{ 'footer.copyright' | translate }}</p>
           <div class="footer-links">
-            <a href="#" i18n>Supplier Terms</a>
-            <a href="#" i18n>Compliance</a>
-            <a href="#" i18n>Global Privacy</a>
+            <a href="#">{{ 'footer.supplierTerms' | translate }}</a>
+            <a href="#">{{ 'footer.compliance' | translate }}</a>
+            <a href="#">{{ 'footer.privacy' | translate }}</a>
           </div>
         </div>
       </footer>
